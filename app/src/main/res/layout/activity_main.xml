@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraint_layout"
@@ -73,5 +72,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/idBoxTwo"
         app:layout_constraintTop_toBottomOf="@+id/idBoxFour" />
+
+    <TextView
+        android:id="@+id/id_howtoplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim16"
+        android:text="@string/String_howtoplay"
+        app:layout_constraintBottom_toBottomOf="@+id/id_tap"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/id_tap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim16"
+        android:layout_marginEnd="@dimen/dim16"
+        android:text="@string/String_tap"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/id_howtoplay"
+        app:layout_constraintTop_toBottomOf="@+id/idBoxTwo"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <Button
+        android:id="@+id/idRed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim16"
+        android:text="@string/string_red"
+        app:layout_constraintBaseline_toBaselineOf="@+id/idGreen"
+        app:layout_constraintEnd_toStartOf="@+id/idGreen"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/idYellow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dim16"
+        android:layout_marginBottom="@dimen/dim16"
+        android:text="@string/string_yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/idGreen"
+        app:layout_constraintTop_toBottomOf="@+id/id_tap"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/idGreen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim16"
+        android:layout_marginEnd="@dimen/dim16"
+        android:text="@string/string_green"
+        app:layout_constraintBaseline_toBaselineOf="@+id/idYellow"
+        app:layout_constraintEnd_toStartOf="@+id/idYellow"
+        app:layout_constraintStart_toEndOf="@+id/idRed" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

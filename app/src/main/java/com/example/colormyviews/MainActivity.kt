@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setListeners(){
-        val clickableViews: List<View> = listOf(idBoxOne,idBoxTwo,idBoxThree,idBoxFour,idBoxFive,constraint_layout)
+        val clickableViews: List<View> = listOf(idBoxOne,idBoxTwo,idBoxThree,idBoxFour,idBoxFive,idRed,idYellow,idGreen,constraint_layout)
         for(item in clickableViews){
             item.setOnClickListener {
                 makecolor(it)
@@ -28,11 +28,17 @@ class MainActivity : AppCompatActivity() {
         when(view.id){
             R.id.idBoxOne -> view.setBackgroundColor(Color.DKGRAY)
             R.id.idBoxTwo -> view.setBackgroundColor(Color.GRAY)
+
             R.id.idBoxThree -> view.setBackgroundResource(android.R.color.holo_green_light)
             R.id.idBoxFour -> view.setBackgroundResource(android.R.color.holo_green_dark)
             R.id.idBoxFive -> view.setBackgroundResource(android.R.color.holo_green_light)
 
-            else -> view.setBackgroundColor(Color.GREEN)
+            //Adding Red Yellow Green respectively
+            R.id.idRed -> idBoxThree.setBackgroundColor(Color.RED)
+            R.id.idGreen -> idBoxFour.setBackgroundColor(Color.GREEN)
+            R.id.idYellow -> idBoxFive.setBackgroundColor(Color.YELLOW)
+
+            else -> view.setBackgroundColor(Color.DKGRAY)
 
 
         }
